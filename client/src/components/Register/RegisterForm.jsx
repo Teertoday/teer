@@ -11,16 +11,16 @@ class RegisterForm extends React.Component {
     return (
       <div className="box">
         <form className="register-form">
-          <input type="text" placeholder="First Name"/>
-          <input type="text" placeholder="Last Name"/>
+          <input type="text" className="inputFirstName" placeholder="First Name"/>
+          <input type="text" className="inputLastName" placeholder="Last Name"/>
           <br/>
-          <input type="text" placeholder="Enter your Email"/>
+          <input type="text" className="input" placeholder="Enter your Email"/>
           <br/>
-          <input type="password" placeholder="password" placeholder="Enter your Password"/>
+          <input type="password" className="input" placeholder="password" placeholder="Enter your Password"/>
           <br/>
-          <input type="text" placeholder="Tell us about yourself!"/>
+          <textarea type="text" className="inputBio" placeholder="Tell us about yourself!"/>
           <br/>
-          <button className="" type="submit"> Register </button>
+          <button className="register" type="submit"> Register </button>
         </form>
       </div>
     )
