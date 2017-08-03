@@ -11,9 +11,8 @@ class EventItem extends React.Component {
   }
 
   clickedEvent() {
-    console.log('THA PROPS: ', this.props.event)
     this.props.history.push({
-      pathname: '/event',
+      pathname: '/event/' + this.props.event.id,
       state: {
         eventID: this.props.event.id
       }

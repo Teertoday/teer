@@ -29,7 +29,7 @@ class App extends React.Component {
               <Route exact path="/login" component={Login}></Route>
               <Route exact path="/register" component={Register}></Route>
               <Route exact path="/profile" component={Profile}></Route>
-              <Route exact path="/event" component={Event}></Route>
+              <Route path="/event/:eventID" component={Event}></Route>
               <Route exact path="/satori" component={Satori}></Route>
               <Route exact path="/charityprofile" component={CharityProfile}></Route>
               <Route exact path="/autocomplete" component={Autocomplete}></Route>

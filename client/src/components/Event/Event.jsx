@@ -28,6 +28,7 @@ class Event extends React.Component {
         location: "San Mateo, CA",
         img_url: "http://prod.static.panthers.clubs.nfl.com/assets/images/community/header-charity-events.jpg"
       },
+      eventID: ''
     }
     this.logoClick = this.logoClick.bind(this);
     this.clickCharity = this.clickCharity.bind(this);
@@ -41,7 +42,7 @@ class Event extends React.Component {
   }
 
   componentWillMount() {
-    var wantedEventID = this.props.location.state.eventID;
+    var wantedEventID = this.props.match.params.eventID;
 
     axios.get('/events/' + wantedEventID)
     .then(response => {
@@ -105,7 +106,7 @@ class Event extends React.Component {
 
         <h2>Event Review</h2>
         <br/>
-          <EventReviewList eventId={this.props.location.state.eventID} />
+          <EventReviewList eventId={this.props.match.params.eventID} />
           <br/>
           <hr/>
         <h2> Upcoming Events</h2>
@@ -123,8 +124,6 @@ class Event extends React.Component {
           <UpcomingEventList />
         </div>
         <Chat/>
-
-
       </div>
     )
   }
