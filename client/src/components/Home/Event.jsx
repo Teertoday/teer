@@ -13,7 +13,7 @@ class Event extends React.Component {
   handleClick(e) {
     var eventID = this.props.eventId;
     this.props.history.push({
-      pathname: '/Event',
+      pathname: '/Event/' + eventID,
       state: {
         eventID: eventID
       }

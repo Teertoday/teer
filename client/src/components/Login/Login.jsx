@@ -9,11 +9,8 @@ class Login extends React.Component {
   }
 
   render () {
-
-
-
     return (
-      <div id="login-page">
+      <div id="register-page">
         <div className="RegisterBox">
           <img className="TEERwh" src="./assets/TEERwh.png"/>
           <LoginForm />

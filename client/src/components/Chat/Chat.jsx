@@ -33,7 +33,6 @@ class Chat extends React.Component {
     
     var context = this;
     subscription.on('rtm/subscription/data', function (pdu) {
-        console.log('This is what I received: ', pdu.body.messages);
         var msgs = context.state.chatMessages;
         msgs.push(pdu.body.messages[0])
         context.setState({chatMessages: msgs});
@@ -52,7 +51,6 @@ class Chat extends React.Component {
 
   chatInput(e) {
     this.setState({chatInput: e.target.value});
-    console.log(e.target.value);
   }
 
   handleKeyPress(e) {
